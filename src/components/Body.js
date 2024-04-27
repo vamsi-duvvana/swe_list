@@ -148,7 +148,7 @@ const Body = () => {
             </div>
             <div className=''>
                 <div className='px-10'>
-                    <img src="https://res.cloudinary.com/dhqgc5kzm/image/upload/v1714166372/New_Project_5_vvghig.png" alt='side-img' className="w-auto h-auto max-w-xs max-h-xs object-cover" />
+                    {/* <img src="https://res.cloudinary.com/dhqgc5kzm/image/upload/v1714166372/New_Project_5_vvghig.png" alt='side-img' className="w-auto h-auto max-w-xs max-h-xs object-cover" /> */}
                 </div>
             </div>
         </div>
