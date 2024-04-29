@@ -12,7 +12,6 @@ const Header = () => {
             <ul className='flex'>
                 <li className='text-white px-10'>About Us</li>
                 <li className='text-white px-10'>Visit Github</li>
-                <li className='text-white px-10'>Team</li>
             </ul>
         </div>
     )
