@@ -52,6 +52,7 @@ const SignUpForm = () => {
                     });
                     setErrorMessage('');
                 } else {
+                    //Need to add a toast
                     console.error('Failed to submit form:', response.statusText);
                 }
             } catch (error) {
@@ -68,7 +69,7 @@ const SignUpForm = () => {
     const isActive = name && email && !isSubmitting;
 
     return (
-        <div className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-3/4 xl:w-2/3 2xl:w-1/2 bg-bright-turquoise-200 rounded-2xl p-6 lg:p-8 shadow-lg">
+        <div className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-3/4 bg-bright-turquoise-200 rounded-2xl p-6 lg:p-8 shadow-lg">
             <div className="bg-bright-turquoise-500 w-full py-3 lg:py-4 rounded-full font-semibold text-center text-lg lg:text-xl">
                 Subscribe
             </div>
