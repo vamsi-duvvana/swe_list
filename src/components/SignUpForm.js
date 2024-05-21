@@ -52,7 +52,7 @@ const SignUpForm = () => {
                     });
                     setErrorMessage('');
                 } else {
-                    // Need to add a toast
+                    //Need to add a toast
                     console.error('Failed to submit form:', response.statusText);
                 }
             } catch (error) {
@@ -69,12 +69,12 @@ const SignUpForm = () => {
     const isActive = name && email && !isSubmitting;
 
     return (
-        <div className="-mt-10 w-2/3 h-2/3 bg-bright-turquoise-200 rounded-2xl">
-            <div className="bg-bright-turquoise-500 w-1/2 py-3 rounded-full font-semibold relative left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center text-2xl">
+        <div className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-3/4 bg-bright-turquoise-200 rounded-2xl p-6 lg:p-8 shadow-lg">
+            <div className="bg-bright-turquoise-500 w-full py-3 lg:py-4 rounded-full font-semibold text-center text-lg lg:text-xl">
                 Subscribe
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="px-16 mt-5">
-                <div className="flex justify-between py-2">
+            <form onSubmit={(e) => e.preventDefault()} className="px-4 lg:px-6 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
                     {jobOptions.map((option, index) => (
                         <label key={index} className="inline-flex items-center text-slate-400">
                             <input
@@ -85,11 +85,11 @@ const SignUpForm = () => {
                                 checked={optedJobOption === option}
                                 onChange={() => handleJobOptionChange(option)}
                             />
-                            <span className="ml-2 text-lg font-semibold">{option}</span>
+                            <span className="ml-2 text-base lg:text-lg xl:text-xl font-semibold">{option}</span>
                         </label>
                     ))}
                 </div>
-                <div className="flex justify-between py-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-2">
                     {frequency.map((option, index) => (
                         <label key={index} className="inline-flex items-center text-slate-400">
                             <input
@@ -100,14 +100,14 @@ const SignUpForm = () => {
                                 checked={optedFrequency === option}
                                 onChange={() => handleFrequencyChange(option)}
                             />
-                            <span className="ml-2 text-lg font-semibold">{option}</span>
+                            <span className="ml-2 text-base lg:text-lg xl:text-xl font-semibold">{option}</span>
                         </label>
                     ))}
                 </div>
                 <div className="py-2">
-                    <p className="text-lg font-semibold text-bright-turquoise-800 ml-2">Name</p>
+                    <p className="text-base lg:text-lg xl:text-xl font-semibold text-bright-turquoise-800 ml-1 lg:ml-2">Name</p>
                     <input
-                        className="px-2 my-1 w-full rounded-md bg-bright-turquoise-100 outline-none text-lg border border-bright-turquoise-500 text-bright-turquoise-700 placeholder-bright-turquoise-500"
+                        className="px-4 py-2 my-1 w-full rounded-md bg-bright-turquoise-100 outline-none text-base lg:text-lg xl:text-xl border border-bright-turquoise-500 text-bright-turquoise-700 placeholder-bright-turquoise-500"
                         placeholder="Enter your name ..."
                         type="text"
                         name="name"
@@ -116,9 +116,9 @@ const SignUpForm = () => {
                     />
                 </div>
                 <div className="py-2">
-                    <p className="text-lg font-semibold text-bright-turquoise-800 ml-2">Email</p>
+                    <p className="text-base lg:text-lg xl:text-xl font-semibold text-bright-turquoise-800 ml-1 lg:ml-2">Email</p>
                     <input
-                        className="px-2 my-1 w-full rounded-md bg-bright-turquoise-100 outline-none text-lg border border-bright-turquoise-500 text-bright-turquoise-700 placeholder-bright-turquoise-500"
+                        className="px-4 py-2 my-1 w-full rounded-md bg-bright-turquoise-100 outline-none text-base lg:text-lg xl:text-xl border border-bright-turquoise-500 text-bright-turquoise-700 placeholder-bright-turquoise-500"
                         placeholder="Enter your email ..."
                         type="text"
                         name="email"
@@ -127,10 +127,10 @@ const SignUpForm = () => {
                     />
                 </div>
                 {errorMessage && <p className="text-rose-of-sharon-500">{errorMessage}</p>}
-                <div className="mt-10 flex justify-center">
+                <div className="mt-6 lg:mt-10 flex justify-center">
                     <button
                         disabled={!isActive}
-                        className={`px-5 py-2 m-2 ${isActive ? 'bg-bright-turquoise-700' : 'bg-bright-turquoise-400'} text-xl rounded-full font-semibold`}
+                        className={`px-6 py-2 m-2 ${isActive ? 'bg-bright-turquoise-700' : 'bg-bright-turquoise-400'} text-base lg:text-lg xl:text-xl rounded-full font-semibold`}
                         onClick={handleFormSubmission}
                     >
                         {isSubmitting ? 'Submitting...' : 'Submit'}
