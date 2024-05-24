@@ -67,6 +67,7 @@ const Main = () => {
                     Click me
                 </button>
             </div>
+            <div className="h-44 w-44 bg-blue-700 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20"></div>
         </div>
     )
 }
