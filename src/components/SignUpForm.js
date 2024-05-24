@@ -74,6 +74,7 @@ const SignUpForm = () => {
                 Subscribe
             </div>
             <form onSubmit={(e) => e.preventDefault()} className="px-4 lg:px-6 mt-4">
+            <p className="text-base lg:text-lg xl:text-xl font-semibold text-bright-turquoise-800 ml-1 lg:ml-2">Looking for:</p>
                 <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 py-2">
                     {jobOptions.map((option, index) => (
                         <label key={index} className="inline-flex items-center text-slate-400">
@@ -89,6 +90,7 @@ const SignUpForm = () => {
                         </label>
                     ))}
                 </div>
+                <p className="text-base lg:text-lg xl:text-xl font-semibold text-bright-turquoise-800 ml-1 lg:ml-2">Want updates:</p>
                 <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 py-2">
                     {frequency.map((option, index) => (
                         <label key={index} className="inline-flex items-center text-slate-400">
